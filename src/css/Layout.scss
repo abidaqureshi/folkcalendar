@@ -1,0 +1,120 @@
+*{
+    
+  margin: 0%;
+  padding: 0%;
+  
+}
+
+body,html{
+
+  height: 100%;
+  width: 100%; 
+}
+
+#header {
+  background-color: #2b2d3b;
+  color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.font-bar{
+  font-size: 30px;
+}
+
+.mg-top {
+
+          margin-top:40px;
+          display:none;
+}
+
+.pt {
+  padding-top: 1.87rem!important;
+}
+
+.img-size{
+  width: 100px;
+}
+
+button.btn.btn-signup {
+
+  border: 1px solid #fff;
+  color: #007bff;
+  background: #fff;
+  padding: 11px 38px;
+  border-radius: 40px;
+  font-weight: 600;
+  margin-left: 70px;
+
+}
+
+ul.navbar-nav li {
+
+  list-style: none;
+  margin: 0px auto;
+  display: inline-flex;
+  padding-left: 110px;
+
+}
+.navbar {
+
+  padding: 0.5rem 5rem;
+  border-right: 1px solid #817e7e;
+}
+
+.second{
+
+  background-color: #3e3e53;
+  padding: 50px;
+
+}
+
+.bg-box{
+
+  background-color: #2b2d3b;
+  min-height:192px;
+
+}
+
+.img-pos{
+
+  position: absolute;
+  top: -112px;
+  right: -20px;
+}
+small{
+  color: #4e4f58;
+}
+.green{
+  color: #56d387;
+}
+.clr{
+  color:#ffffffbf;
+}
+.thr-pic{
+  padding-top: 200px;
+}
+h3 {
+  font-size: 1.1rem;
+}
+.des {
+  
+  padding-left: 30px;
+  padding-top: 3px;
+}
+
+.movieTitleLink {
+
+  cursor: pointer;
+}
+
+.font-bar{ display:none ;}
+
+@media only screen and (max-width: 1440px) {
+
+  ul.navbar-nav li {
+    padding-left:23px;
+  }
+}    
+
+@import "~bootstrap/dist/css/bootstrap.min.css";

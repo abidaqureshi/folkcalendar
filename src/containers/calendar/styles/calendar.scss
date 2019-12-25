@@ -1,0 +1,61 @@
+.calendar{
+
+    background-color: #f0e9e9;
+    &.calendar--days {
+
+      font-weight: bold;
+      background-color: #504c4c0d;
+      width:100%;
+      
+    }
+    
+   
+}
+.calendar--week__day {
+  width:14.28%; 
+  border-left:2px solid #ffffff;
+  border-top:2px solid #ffffff;
+}
+.calendar--week__date {
+  width:14.28%; 
+  border-left:2px solid #ffffff;
+  word-wrap: break-word;
+}
+.calendar--events {
+
+  background-color: #ffffff;
+  width:100%;
+}
+.calendar--events__folk {
+
+  font-weight: normal;
+  font-style: italic;
+  background-color:#20e309ab;
+  word-wrap: break-word;
+
+
+}
+
+.calendar--events__public {
+
+  font-weight: normal;
+  font-style: italic;
+  background-color:#f30000e8;
+  word-wrap: break-word;
+  color:#ffffff;
+}
+.calendar--error--js__show {
+  display:block;
+}
+
+.calendar--error--js__hide { 
+  display:none;
+}
+
+.calendar--info--js__show {
+  display:block;
+}
+
+.calendar--info--js__hide {
+  display:none;
+}
