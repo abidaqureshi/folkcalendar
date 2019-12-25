@@ -15,7 +15,12 @@
 ## Code Style
 I'm following [Airbnb Code Style](https://github.com/airbnb/javascript/tree/master/react) and [Uncle Bob clean code book](https://www.amazon.com/
 
-### Steps to install:
+### Steps to install & Run:
 - Inside project folder
 - cmd > npm install
 - cmd > npm start
+
+### Steps to build
+- Inside project folder
+- cmd > npm run build
+- Then serve with static server or deployed on production server
