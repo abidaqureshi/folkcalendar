@@ -13,12 +13,12 @@
 }
 .calendar--week__day {
   width:14.28%; 
-  border-left:2px solid #ffffff;
-  border-top:2px solid #ffffff;
+  border-left:2px solid #f0e9e9;
+  border-top:2px solid #f0e9e9;
 }
 .calendar--week__date {
   width:14.28%; 
-  border-left:2px solid #ffffff;
+  border-left:2px solid #f0e9e9;
   word-wrap: break-word;
 }
 .calendar--events {
@@ -32,6 +32,7 @@
   font-style: italic;
   background-color:#20e309ab;
   word-wrap: break-word;
+  border-radius:5px;
 
 
 }
@@ -43,6 +44,7 @@
   background-color:#f30000e8;
   word-wrap: break-word;
   color:#ffffff;
+  border-radius:5px;
 }
 .calendar--error--js__show {
   display:block;
@@ -58,4 +60,16 @@
 
 .calendar--info--js__hide {
   display:none;
+}
+@media (max-width: 768px) {
+  .mobile {
+    float: none!important;
+
+    &.mobile--select-box{
+      margin:5px;
+    }
+    .mobile--buttons{
+      margin:5px;
+    }
+  }
 }

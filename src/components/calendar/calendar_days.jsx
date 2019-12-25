@@ -7,7 +7,7 @@ const CalendarDays = (props) => {
   const { weekdDays } = props
 
   return weekdDays.map((v) => (
-    <div className="calendar--week__day py-sm-2 float-left">
+    <div key={new Date().getTime() + Math.random()} className="calendar--week__day py-sm-2 float-left">
       {v}
     </div>
   ))

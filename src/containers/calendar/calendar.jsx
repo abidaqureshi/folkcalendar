@@ -17,6 +17,7 @@ export default class Calendar extends Component {
     }
   }
 
+
   componentDidMount() {
     const { getCalendarHolidays } = this.props
     const { startDateObj, firstDayOfTheWeek } = this.state
@@ -28,16 +29,26 @@ export default class Calendar extends Component {
 
   getNewWeek = (startDate, firstDayOfTheWeek) => {
     const { getCalendarHolidays } = this.props
-    this.setState({ startDateObj: startDate, firstDayOfTheWeek })
+
     const weekObject = generateDays(startDate, firstDayOfTheWeek, 'Ymd', '-')
     const weekStartDate = weekObject.dates[0]
     const weekEndDate = weekObject.dates.pop()
     getCalendarHolidays(weekStartDate, weekEndDate)
+    this.setState({
+      startDateObj: startDate,
+      firstDayOfTheWeek,
+    })
   }
+
 
   render() {
     const { events } = this.props
-    const { holidays, error, reason } = events
+    const {
+      holidays,
+      error,
+      reason,
+      loader,
+    } = events
     const { startDateObj, firstDayOfTheWeek } = this.state
     const weekObject = generateDays(startDateObj, firstDayOfTheWeek, 'dmY', '.')
     const { days, dates } = weekObject
@@ -56,11 +67,13 @@ export default class Calendar extends Component {
                     <b>Error: </b>
                     {reason}
                   </div>
+
                   <Navigation
                     getNewWeek={this.getNewWeek}
                     startDate={dates[0]}
                     endDate={dates[dates.length - 1]}
                     firstDayOfTheWeek={firstDayOfTheWeek}
+                    loader={loader}
                   />
                 </div>
               </div>

@@ -45,7 +45,6 @@ const generateDays = (startDate, firstDayOfTheWeek, dateFormat = 'dmY', symbol =
 
   for (let i = 0; i < 7; i += 1) {
     const tmpDate = new Date(currentTime + (i * 24 * 3600 * 1000))
-    console.log('temp date ', tmpDate)
     daysArray.push(DAYS[tmpDate.getDay()])
     datesArray.push(formatDate(tmpDate, dateFormat, symbol))
   }

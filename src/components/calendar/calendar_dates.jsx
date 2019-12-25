@@ -7,7 +7,7 @@ import React from 'react'
 const CalendarDates = (props) => {
   const { weekDates } = props
   return weekDates.map((wkDate) => (
-    <div className="calendar--week__date py-sm-2 float-left">
+    <div key={new Date().getTime() + Math.random()} className="calendar--week__date py-sm-2 float-left">
       {wkDate}
     </div>
   ))

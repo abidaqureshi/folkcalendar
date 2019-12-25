@@ -7,7 +7,7 @@ import { DAY_FULL_NAMES } from '../../utility/constants'
 */
 
 const renderOptions = () => DAY_FULL_NAMES.map((d, k) => (
-  <option value={k}>{d}</option>
+  <option key={new Date().getTime() + Math.random()} value={k}>{d}</option>
 ))
 
 const updateFirstDayOfWeek = (dateStr, getWeekFunc, evt) => {
@@ -19,7 +19,6 @@ const updateFirstDayOfWeek = (dateStr, getWeekFunc, evt) => {
 }
 
 const getPrevWeek = (dateStr, dayOfWeek, getWeekFunc) => {
-  console.log('date ', dateStr, 'day of the week ', dayOfWeek)
   const dateArray = dateStr.split('.')
   const ymdStr = [dateArray[2], dateArray[1], dateArray[0]].join('-')
   let dateObj = new Date(ymdStr)
@@ -28,7 +27,6 @@ const getPrevWeek = (dateStr, dayOfWeek, getWeekFunc) => {
 }
 
 const getNextWeek = (dateStr, dayOfWeek, getWeekFunc) => {
-  console.log('date ', dateStr, 'day of the week ', dayOfWeek)
   const dateArray = dateStr.split('.')
   const ymdStr = [dateArray[2], dateArray[1], dateArray[0]].join('-')
   let dateObj = new Date(ymdStr)
@@ -42,13 +40,21 @@ const Navigation = (props) => {
     endDate,
     startDate,
     getNewWeek,
+    loader,
   } = props
   return (
     <div className="h5 text-center">
       <div className="pt-sm-3 pt-lg-3 pb-sm-3 pb-lg-3">
           Week view
       </div>
-      <div className="float-right mx-sm-3 mx-lg-3">
+      {loader ? (
+        <div className="text-center text-success">
+          <div className="spinner-border" role="status">
+            <span className="sr-only">Loading...</span>
+          </div>
+        </div>
+      ) : ''}
+      <div className="float-right mx-sm-3 mx-lg-3 mobile mobile--select-box">
         <label>
           Day of the week
         </label>
@@ -56,11 +62,11 @@ const Navigation = (props) => {
           {renderOptions()}
         </select>
       </div>
-      <div className="float-right py-sm-4 py-lg-4 mx-sm-3 mx-lg-3">
-        <button type="button" onClick={() => { getPrevWeek(startDate, firstDayOfTheWeek, getNewWeek) }} className="btn btn-primary mx-sm-3 mx-lg-3 ">
+      <div className="float-right py-sm-4 py-lg-4 mx-sm-3 mx-lg-3 mobile ">
+        <button type="button" onClick={() => { getPrevWeek(startDate, firstDayOfTheWeek, getNewWeek) }} className="btn btn-primary mx-sm-3 mx-lg-3 mobile--buttons">
             &lt; Prev
         </button>
-        <button type="button" onClick={() => { getNextWeek(endDate, firstDayOfTheWeek, getNewWeek) }} className="btn btn-primary mx-sm-3 mx-lg-3">
+        <button type="button" onClick={() => { getNextWeek(endDate, firstDayOfTheWeek, getNewWeek) }} className="btn btn-primary mx-sm-3 mx-lg-3 mobile--buttons">
             Next &gt;
         </button>
       </div>
@@ -74,4 +80,5 @@ Navigation.propTypes = {
   endDate: PropTypes.string.isRequired,
   startDate: PropTypes.string.isRequired,
   getNewWeek: PropTypes.func.isRequired,
+  loader: PropTypes.bool.isRequired,
 }
