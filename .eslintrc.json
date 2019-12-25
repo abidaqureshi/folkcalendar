@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb","airbnb/hooks"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "rules": {
+    "semi": ["error", "never"],
+    "no-console": "off",
+    "no-var": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "no-case-declarations": "off",
+    "operator-linebreak": ["error", "after"],
+    "no-param-reassign": "off",
+    "no-restricted-syntax": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-no-bind":"off",
+    "import/no-unresolved":"off",
+    "no-undef": "off",
+    "no-underscore-dangle": "off",
+    "jsx-a11y/click-events-have-key-events":"off",
+    "jsx-a11y/no-static-element-interactions":"off",
+    "jsx-a11y/mouse-events-have-key-events":"off",
+    "no-prototype-builtins": "off",
+    "no-alert":"off",
+    "no-unused-expressions":"off",
+    "class-methods-use-this":"off",
+    "react/no-did-update-set-state":"off",
+    "jsx-a11y/no-noninteractive-element-interactions":"off",
+    "jsx-a11y/label-has-associated-control":"off",
+    "jsx-a11y/label-has-for":"off",
+    "jsx-a11y/anchor-is-valid":"off",
+    "no-useless-escape":"off",
+    "react/no-unused-prop-types":"off",
+    "jsx-a11y/interactive-supports-focus":"off",
+    "jsx-a11y/no-redundant-roles":"off"
+  }
+}
