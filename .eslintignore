@@ -1,0 +1,15 @@
+./src/client/styles
+./test/**
+./public/*
+./node_module/*
+./src/serviceWorker.js
+*.scss
+*.html
+*.png
+*.jpeg
+*.svg
+*.jpg
+*.ttf
+*.ejs
+*.pdf
+*.txt
