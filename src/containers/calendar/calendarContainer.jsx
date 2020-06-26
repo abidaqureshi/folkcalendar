@@ -4,7 +4,6 @@ import {
   getCalendarHolidays,
 } from '../../actions'
 
-
 const mapStateToProps = (state) => ({
   events: state.calendar,
 })

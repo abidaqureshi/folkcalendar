@@ -45,7 +45,7 @@ const Navigation = (props) => {
   return (
     <div className="h5 text-center">
       <div className="pt-sm-3 pt-lg-3 pb-sm-3 pb-lg-3">
-          Week view
+        Week view
       </div>
       {loader ? (
         <div className="text-center text-success">
@@ -64,10 +64,10 @@ const Navigation = (props) => {
       </div>
       <div className="float-right py-sm-4 py-lg-4 mx-sm-3 mx-lg-3 mobile ">
         <button type="button" onClick={() => { getPrevWeek(startDate, firstDayOfTheWeek, getNewWeek) }} className="btn btn-primary mx-sm-3 mx-lg-3 mobile--buttons">
-            &lt; Prev
+          &lt; Prev
         </button>
         <button type="button" onClick={() => { getNextWeek(endDate, firstDayOfTheWeek, getNewWeek) }} className="btn btn-primary mx-sm-3 mx-lg-3 mobile--buttons">
-            Next &gt;
+          Next &gt;
         </button>
       </div>
     </div>

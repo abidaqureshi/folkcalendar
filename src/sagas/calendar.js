@@ -21,7 +21,6 @@ export function* fetchGetCalendarEvents(data) {
   }
 }
 
-
 export function* getCalendarEvents() {
   yield takeEvery(GET_CALENDAR_HOLIDAYS, fetchGetCalendarEvents)
 }

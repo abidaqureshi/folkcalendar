@@ -7,7 +7,6 @@ import CalendarEvents from '../../components/calendar/calendar_events'
 import Navigation from '../../components/calendar/navigation'
 import { generateDays } from '../../utility/helpers'
 
-
 export default class Calendar extends Component {
   constructor() {
     super()
@@ -16,7 +15,6 @@ export default class Calendar extends Component {
       firstDayOfTheWeek: 0,
     }
   }
-
 
   componentDidMount() {
     const { getCalendarHolidays } = this.props
@@ -39,7 +37,6 @@ export default class Calendar extends Component {
       firstDayOfTheWeek,
     })
   }
-
 
   render() {
     const { events } = this.props
