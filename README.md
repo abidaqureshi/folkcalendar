@@ -24,3 +24,6 @@ I'm following [Airbnb Code Style](https://github.com/airbnb/javascript/tree/mast
 - Inside project folder
 - cmd > npm run build
 - Then serve with static server or deployed on production server
+
+### Live working code
+[FolkCalender demo](http://folkcalendar-ci.s3-website.us-east-2.amazonaws.com/)
